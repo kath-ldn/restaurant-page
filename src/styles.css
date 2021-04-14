@@ -276,8 +276,9 @@ li{
     }
 
     .headerButton{
+        width: 150px;
         display: none;
-        margin: 10px 0 10px 0;
+        padding: 20px 0 10px 0;
         transition: ease-in 1s;
     }
 
@@ -288,9 +289,8 @@ li{
         position: fixed;
         top: calc(18vh/2);
         right: 15px;
-        background-color: white;
         transition: ease-in 1s;
-        padding: 15px;
+        background-color: white;
     }
 
     .hamburgerContainer{
