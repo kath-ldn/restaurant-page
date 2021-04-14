@@ -1,0 +1,341 @@
+/* Body & header styles */
+body {
+    font-family: 'Montserrat', sans-serif;
+}
+
+header{
+    width: 100vw;
+    height: 18vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+h1{
+    font-size: 46px;
+    padding: 20px;
+    letter-spacing: 4px;
+}
+
+#headerLogo:hover{
+    cursor: pointer;
+    transition: ease-in 0.5s;
+    font-weight: 500;
+}
+
+nav{
+    width:60vw;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.hamburgerContainer{
+    display: none;
+}
+
+.headerButton{
+    background: none;
+    border:none;
+    border-radius: none;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 20px;
+    padding: 2px;
+}
+
+.headerButton:hover{
+    font-weight: 500;
+    font-size: 21px;
+    padding: 0;
+    cursor: pointer;
+    transition: ease-in 0.5s;
+}
+/* home styles */
+#home-img{
+    width: 100vw;
+    height: 82vh;
+    overflow: none;
+    background: url(./assets/sushi-platter.jpg) no-repeat;
+    background-position: 50% 20%;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+}
+
+#homeTagDiv{
+    background: rgba(0, 0, 0, 0.5);
+    width: 300px;
+    margin: 0 0 5% 8%;
+}
+
+#homeTagLine{
+    color: #FFF;
+    opacity: 100%;
+    font-size: 18px;
+    letter-spacing: 4px;
+    line-height: 32px;
+    padding: 10px;
+}
+
+.popUpAd{
+    transition: ease-in 1s;
+    position: fixed;
+    bottom: 0;
+    width: 100vw;
+    opacity: 80%;
+    background-color: rgb(190, 62, 62);
+    border-radius: 2px;
+}
+
+.popUpAdText{
+    color: #FFF;
+    opacity: 100%;
+    font-size: 1em;
+    letter-spacing: 2px;
+    line-height: 26px;
+    padding: 0 15px 15px 15px;
+    text-align: center;
+}
+
+.popUpAdText:hover{
+    opacity: 60%;
+    cursor: pointer;
+}
+
+.popUpAdClose{
+    color: #FFF;
+    margin: 5px 0 0 10px;
+    text-align: center;
+    width: fit-content;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.popUpAdClose:hover{
+    cursor: pointer;
+    opacity: 50%;
+}
+/* Generic page styles */
+
+.pageContainer{
+    display: flex;
+    width: 100vw;
+    height: 82vh;
+    transition: ease-in 1s;
+}
+
+.pageTextContainer{
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 5% 5% 7% 5%;
+    box-sizing: border-box;
+}
+
+h3{
+    text-align: center;
+    font-size: 24px;
+    font-weight: 500;
+    margin-bottom: 10%;
+    line-height: 1.5;
+}
+
+p{
+    text-align: center;
+    font-size: 18px;
+    padding-bottom: 7%;
+    line-height: 1.5;
+}
+
+.pageImg{
+    width: 50%;
+    height: 100%;
+}
+
+.selectedPageStyle{
+    font-weight: 500;
+    text-decoration: underline;
+    font-size: 21px;
+    padding: 0;
+    cursor: pointer;
+    transition: ease-in 0.5s;
+}
+
+/* About styles */
+#aboutImg{
+    background: url(./assets/stir-fry-noodles.jpg) no-repeat;
+    background-size: cover;
+    background-position: 100% 67%;
+}
+
+/* Book styles */
+#bookImg{
+    background: url(./assets/roll-platter.jpg) no-repeat;
+    background-size: cover;
+    background-position: 100% 50%;
+}
+
+form{
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+label{
+    width: 100%;
+    font-size: 14px;
+    color: #444;
+}
+
+input{
+    width: 100%;
+    margin: 5px 0 15px 0;
+    height: 20px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+#bookSubHeader{
+    margin-bottom: 5%;
+}
+
+#userReqs{
+    width: 100%;
+    height: 40px;
+    overflow: visible;
+    margin: 5px 0 15px 0;
+    font-family: 'Montserrat', sans-serif;
+}
+
+#thankYou{
+    display: none;
+    width: 90%;
+    text-align: center;
+    font-size: 24px;
+}
+
+input[type="submit"]{
+    height: 40px;
+    width: 52%;
+    margin: 5px 0 15px 0;
+    font-size: 16px;
+    border: none;
+    background-color: rgb(190, 62, 62, 0.8);
+    color: white;
+
+}
+
+/* Contact styles */
+
+#contactImg{
+    background: url(./assets/restaurant.jpg) no-repeat;
+    background-position: 50% 60%;
+    background-size: cover;
+}
+
+h4{
+    font-weight: 500;
+    padding-bottom: 3px;
+    font-size: 18px;
+}
+
+/* Menu styles */
+
+#menuImg{
+    background: url(./assets/round-platter.jpg) no-repeat;
+    background-position: 0% 73%;
+    background-size: cover;
+}
+
+.menuHeader{
+    margin: 40px 0 4px 0;
+}
+
+ul{
+    text-align: center;
+}
+
+li{
+    margin-bottom: 10px;
+    padding-bottom: 3px;
+}
+
+@media(max-width: 500px){
+    header{
+        justify-content: space-between;
+    }
+
+    h1{
+        font-size: 32px;
+        padding: 20px;
+        letter-spacing: 4px;
+    }
+
+    .headerButton{
+        display: none;
+        margin: 10px 0 10px 0;
+        transition: ease-in 1s;
+    }
+
+    nav{
+        width:fit-content;
+        display: flex;
+        flex-direction: column;
+        position: fixed;
+        top: calc(18vh/2);
+        right: 15px;
+        background-color: white;
+        transition: ease-in 1s;
+        padding: 15px;
+    }
+
+    .hamburgerContainer{
+        position: fixed;
+        top: calc(18vh/2 - 28px);
+        right: 50px;
+        width: 30px;
+        height: 28px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        background-color: white;
+        border: 5px white solid;
+    }
+
+    .hamburgerContainer:hover{
+        cursor: pointer;
+        width: 32px;
+        height: 32px;
+        transition: ease-in 0.3s;
+    }
+    
+    .layer{
+        width: 100%;
+        height: 16%;
+        background-color: rgb(51, 51, 51);
+        border-radius: 3px;
+    }
+
+    .pageContainer{
+        flex-direction: column;
+        height: fit-content;
+        overflow: scroll;
+    }
+
+    .pageTextContainer{
+        width: 100%;
+        height: 50%;
+    }
+
+    .pageImg{
+        width: 100vw;
+        height: 100vw;
+    }
+
+
+}

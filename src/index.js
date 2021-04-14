@@ -1,58 +1,75 @@
-import { pageLoad } from './header.js'
-import { defaultContent } from './header.js'
-import { aboutUsContent } from './about.js'
-import { menuContent } from './menu.js'
-import { blogContent } from './blog.js'
-import { contactContent } from './contact.js'
+import './reset.css';
+import './styles.css';
+import { navContent } from './nav.js';
+import { homeContent } from './home.js';
+import { aboutContent } from './about.js';
+import { menuContent } from './menu.js';
+import { bookContent } from './book.js';
+import { contactContent } from './contact.js';
 
-pageLoad();
-defaultContent();
-
-//get button elements
-document.getElementById("home");
-document.getElementById("aboutUs");
-document.getElementById("menu");
-document.getElementById("blog");
-document.getElementById("contactUs");
-
+//for some reason global variables for the header link didn't work so have repeated
 
 //functions to remove default content
 function removeChildren() {
- document.getElementById("bodyContent");   
+    let bodyContent = document.getElementById("bodyContent");   
     while (bodyContent.hasChildNodes()) {  
         bodyContent.removeChild(bodyContent.firstChild);
-      };
+    };
+
+    let home = document.getElementById("headerLogo");
+    let about = document.getElementById("about");
+    let menu = document.getElementById("menu");
+    let book = document.getElementById("book");
+    let contact = document.getElementById("contact");
+    let headerLinks = [home, about, menu, book, contact];
+    for(let i = 0; i < headerLinks.length; i++){
+        if(headerLinks[i].classList.contains("selectedPageStyle")){
+            headerLinks[i].classList.remove("selectedPageStyle")
+        }
+    };
 };
 
-//event listener for home
-home.addEventListener("click", () => {
-    removeChildren();
-    defaultContent();
-});
+function addNavEvents(){
+    //get button elements
+    let home = document.getElementById("headerLogo");
+    let about = document.getElementById("about");
+    let menu = document.getElementById("menu");
+    let book = document.getElementById("book");
+    let contact = document.getElementById("contact");
+    //event listener for home
+    home.addEventListener("click", () => {
+        removeChildren();
+        homeContent();
+    });
 
-//event listener for about us
-aboutUs.addEventListener("click", () => {
-    removeChildren();
-    aboutUsContent();
-});
+    //event listener for about us
+    about.addEventListener("click", () => {
+        removeChildren();
+        aboutContent();
+    });
 
-//event listener for about us
-menu.addEventListener("click", () => {
-    removeChildren();
-    menuContent();
-});
+    //event listener for about us
+    menu.addEventListener("click", () => {
+        removeChildren();
+        menuContent();
+    });
 
-//event listener for about us
-blog.addEventListener("click", () => {
-    removeChildren();
-    blogContent();
-});
+    //event listener for about us
+    book.addEventListener("click", () => {
+        removeChildren();
+        bookContent();
+    });
 
-//event listener for about us
-contact.addEventListener("click", () => {
-    removeChildren();
-    contactContent();
-});
+    //event listener for about us
+    contact.addEventListener("click", () => {
+        removeChildren();
+        contactContent();
+    });
+};
 
-/* Write the tab-switching logic inside of index.js. You should have event listeners for each tab that wipes out the current contents
-and then runs the correct ‘tab module’ to populate it again.*/
+function setUpPage(){
+    navContent();
+    homeContent();
+    addNavEvents();
+};
+setUpPage();
