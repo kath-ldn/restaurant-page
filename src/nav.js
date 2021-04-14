@@ -26,8 +26,10 @@ function navContent() {
         let navItems = document.querySelectorAll(".headerButton");
         for(let i=0; i<navItems.length; i++){
             if(navItems[i].style.display === "none"){
-                navItems[i].style.display = "block";   
+                subHeader.style.display = "block";
+                navItems[i].style.display = "block";  
             } else {
+                subHeader.style.display = "none";
                 navItems[i].style.display = "none"
             }
         }
