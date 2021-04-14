@@ -282,6 +282,10 @@ li{
         transition: ease-in 1s;
     }
 
+    .headerButton:hover{
+        padding: 20px 0 10px 0;
+    }
+
     nav{
         width:fit-content;
         display: flex;
